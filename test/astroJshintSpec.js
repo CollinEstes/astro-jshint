@@ -11,7 +11,7 @@ describe('astro-jshint', function () {
 
 	it('should return command as jshint', function () {
 		var result = astroJshint(cwd, {});
-		expect(result.cmd).to.equal('jshint');
+		expect(result.cmd.indexOf('astro-jshint/node_modules/.bin/jshint')).to.not.equal(-1);
 	});
 
 	it('should return proper options', function () {

@@ -1,17 +1,17 @@
 {
   "name": "astro-jshint",
-  "version": "0.1.3",
-  "description": "An astro-cli module for running jshint over a javascript application",
+  "version": "1.0.2",
+  "description": "Astro module for running jshint analysis over a javascript application",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --recursive ./test/setup.js ./test/**/*.js"
+    "test": "astro test"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CollinEstes/astro-jshint.git"
   },
   "keywords": [
-    "astro-cli",
+    "astro",
     "jshint",
     "style",
     "asset",
@@ -19,14 +19,13 @@
     "build"
   ],
   "author": "Collin Estes",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/CollinEstes/astro-jshint/issues"
   },
   "homepage": "https://github.com/CollinEstes/astro-jshint#readme",
   "devDependencies": {
-    "chai": "^3.0.0",
-    "mocha": "^2.2.5"
+    "astro": "^0.1.3"
   },
   "dependencies": {
     "jshint": "^2.8.0",

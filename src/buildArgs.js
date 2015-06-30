@@ -12,7 +12,7 @@ var getIgnoreFile = require('./getIgnoreFilePath');
 
 function buildArgs (projectDir, options) {
 	var args = []
-		, reporter = path.join(path.dirname(fs.realpathSync(__filename)), '../node_modules/jshint-stylish')
+		, reporter = path.resolve(fs.realpathSync(__dirname), '../node_modules/jshint-stylish')
 		, excludePath = getIgnoreFile(projectDir);
 	// currently there are no additional options available for this module
 
