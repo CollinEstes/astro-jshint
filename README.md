@@ -1,7 +1,8 @@
 # astro-jshint
-###[astro](https://www.npmjs.com/package/astro) module that provides [jshint](https://www.npmjs.com/package/mocha) code analysis
 
-## USAGE
+### [astro](https://www.npmjs.com/package/astro) module that provides [jshint](https://www.npmjs.com/package/mocha) code analysis
+
+### USAGE
 
 ```
 $cd anyJSProject
