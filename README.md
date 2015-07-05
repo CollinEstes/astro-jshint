@@ -1,6 +1,6 @@
 # astro-jshint
 
-[astro](https://www.npmjs.com/package/astro) module that provides [jshint](https://www.npmjs.com/package/mocha) code analysis
+[astro](https://www.npmjs.com/package/astro) module that provides [jshint](https://www.npmjs.com/package/jshint) code analysis
 
 ### USAGE
 
