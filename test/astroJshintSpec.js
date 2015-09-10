@@ -17,6 +17,6 @@ describe('astro-jshint', function () {
 	it('should return proper options', function () {
 		var result = astroJshint(cwd, {});
 		expect(result.args[result.args.length -1]).to.be.equal(cwd);
-		expect(result.args.length).to.be.equal(3);
+		expect(result.args.length).to.be.equal(4);
 	});
 });

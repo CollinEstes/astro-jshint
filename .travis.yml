@@ -1,4 +1,11 @@
 language: node_js
-
 node_js:
- - "0.12"
+- '0.12'
+deploy:
+  provider: npm
+  email: collin.j.estes@gmail.com
+  api_key:
+    secure: IyGg75dYk9+5sHZAflx+ZjFvQtMnA3eGmEHaRVPmcwxbYpHCJhW38CnP0heQX759IXieMlePlh93nCjEklsCM03Nu/lRZW3nI+9I5/Ro5xuoKrUbMuYEfwo+zXPNMX5pRmdQQVS0+5gS0YNc5qBJcuZTHxc5ECdbRZ8G1UqkZlI0GVqI0iCqZO3M77eHJdRClvagfZK/FbZYxL1tGwvoaxSxEjkMX5GBgYpSnkbzrX0PC7Pl4b179M56R1UdlXVwe7NmNwtIkzm7/N20VjpJP2yuKIdGXbj/DsQEDq77DcqF96QyPM/fwpjxXn0eWyxF9NDhv0n4z/hPB1grHG29k4bNz6+3aTYknozUKH8BsHzbcz49xCHlZ0GNWT8DMSDqAtkqF7m7K0wJslmSISUumk3WKLavYlewd3szAPRiTXN5tumnC+J+Q0rrCqb+dUZHiFCk2Z8jcTk/iiciZGchtRxRU80uF1+oeVEfIkIA5gb9I04m3qAeoDYZBHanc+SUSwAgdfMcSExfoXS36jKsONCCq6BlvoGkMJnyZ6D+hKTb9jVsGIu41pFWZ3r1kyvsfIJlwelgyicdMWp3M+sRN79EPqZM5Lbkmm+6EzDJwgM/uv57ti8S222/PDsPZkTjZdVl8My50alttdcMJ4I358jLcN9bUMqsYBYRTg9ggJE=
+  on:
+    tags: true
+    repo: CollinEstes/astro-jshint
