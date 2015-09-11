@@ -12,7 +12,7 @@ var getIgnoreFile = require('./getIgnoreFilePath')
 	,	getJsHintRcFilePath = require('./getJsHintRcFilePath')
 	;
 
-function buildArgs (projectDir, options) {
+function buildArgs (projectDir) {
 	var args = []
 		, reporter = path.resolve(fs.realpathSync(__dirname), '../node_modules/jshint-stylish')
 		, excludePath = getIgnoreFile(projectDir)
@@ -27,6 +27,7 @@ function buildArgs (projectDir, options) {
 	args.push(`--exclude-path=${excludePath}`);
 
 	args.push(`--config=${configPath}`);
+	args.push(`--verbose`);
 
 	// add projectDir as source
 	args.push(projectDir);

@@ -8,6 +8,7 @@ var path = require('path')
   ;
 
 var checkForProjectFile = require('./checkForProjectFile.js')
+  , formatHappyText = require('./formatHappyText')
   ;
 
 function getDefault () {
@@ -16,8 +17,11 @@ function getDefault () {
 
 module.exports = function (projectDir) {
   var jshintrcFile = checkForProjectFile(projectDir, '.jshintrc')
-    , hasLocalJsHintRc = jshintrcFile === undefined
+    , hasLocalJsHintRc = jshintrcFile !== undefined
     ;
 
+  console.log(`\nUsing ${formatHappyText(hasLocalJsHintRc ? 'local' : 'default astro')} .jshintrc`);
+  console.log(`File path is: ${formatHappyText(hasLocalJsHintRc ? jshintrcFile : getDefault())}`);
+
   return (hasLocalJsHintRc ? jshintrcFile : getDefault());
-}
+};

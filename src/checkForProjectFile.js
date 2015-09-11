@@ -5,11 +5,9 @@
 **/
 
 module.exports = function (projectDir, fileName) {
-	var filePath = projectDir + '/' + fileName;
 	try {
-		require.resolve(projectDir + '/' + fileName);
-		return filePath;
+		return require.resolve(`${projectDir}/${fileName}`);
 	} catch (e) {
-		return null;
+		return undefined;
 	}
 };

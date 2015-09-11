@@ -16,4 +16,4 @@ module.exports = function (projectDir, options) {
 
 	//setup
 	return { cmd: cmd, args: args };
-}
+};

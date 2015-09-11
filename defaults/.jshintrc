@@ -28,8 +28,13 @@
   // http://www.jshint.com/docs/options/#environments
 
   "browser": true,
+  "browserify": true,
   "jquery": true,
   "node": true,
-  "mocha": true
+  "mocha": true,
+
+  "globals": {
+    "expect": true
+  }
 
 }
