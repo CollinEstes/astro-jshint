@@ -4,7 +4,7 @@
   "description": "Astro module for running jshint analysis over a javascript application",
   "main": "index.js",
   "scripts": {
-    "test": "astro test"
+    "test": "exit 0"
   },
   "repository": {
     "type": "git",
