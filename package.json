@@ -1,6 +1,6 @@
 {
   "name": "astro-jshint",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Astro module for running jshint analysis over a javascript application",
   "main": "index.js",
   "scripts": {
