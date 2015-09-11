@@ -20,8 +20,14 @@ module.exports = function (projectDir) {
     , hasLocalJsHintRc = jshintrcFile !== undefined
     ;
 
-  console.log(`\nUsing ${formatHappyText(hasLocalJsHintRc ? 'local' : 'default astro')} .jshintrc`);
-  console.log(`File path is: ${formatHappyText(hasLocalJsHintRc ? jshintrcFile : getDefault())}`);
+  if (hasLocalJsHintRc) {
+    console.log(`\nFound .jshintrc file...`);
+  } else {
+    console.log(`\nDidnt find .jshintrc file...`);
+  }
+
+  console.log(`Using ${formatHappyText(hasLocalJsHintRc ? 'local' : 'default astro')} .jshintrc file`);
+  console.log(`.jshintrc path ${formatHappyText(hasLocalJsHintRc ? jshintrcFile : getDefault())}`);
 
   return (hasLocalJsHintRc ? jshintrcFile : getDefault());
 };

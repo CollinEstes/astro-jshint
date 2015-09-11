@@ -15,18 +15,15 @@ var getIgnoreFile = require('./getIgnoreFilePath')
 function buildArgs (projectDir) {
 	var args = []
 		, reporter = path.resolve(fs.realpathSync(__dirname), '../node_modules/jshint-stylish')
-		, excludePath = getIgnoreFile(projectDir)
-		,	configPath = getJsHintRcFilePath(projectDir)
+		, excludeFilePath = getIgnoreFile(projectDir)
+		,	jshintrcFilePath = getJsHintRcFilePath(projectDir)
 		;
 	// currently there are no additional options available for this module
 
-	// add stylish reporter
 	args.push(`--reporter=${reporter}`);
 
-	// add exclude path
-	args.push(`--exclude-path=${excludePath}`);
-
-	args.push(`--config=${configPath}`);
+	args.push(`--exclude-path=${excludeFilePath}`);
+	args.push(`--config=${jshintrcFilePath}`);
 	args.push(`--verbose`);
 
 	// add projectDir as source

@@ -4,6 +4,9 @@
   "description": "Astro module for running jshint analysis over a javascript application",
   "main": "index.js",
   "scripts": {
+    "transpile": "astro babel",
+    "prejshint": "npm run transpile",
+    "jshint": "astro jshint",
     "test": "exit 0"
   },
   "repository": {
