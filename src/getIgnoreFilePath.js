@@ -4,7 +4,6 @@
 *
 **/
 var path = require('path')
-	, fs = require('fs')
 	;
 
 var checkForProjectFile = require('./checkForProjectFile.js')
@@ -12,29 +11,21 @@ var checkForProjectFile = require('./checkForProjectFile.js')
   , formatAngryText = require('./formatAngryText')
   ;
 
-function getDefault () {
-	return path.join(path.dirname(fs.realpathSync(__filename)), '../defaults/.jshintignore');
-}
-
 module.exports = function (projectDir) {
 	var jshintIgnore = checkForProjectFile(projectDir, '.jshintignore')
-		, gitIgnore = checkForProjectFile(projectDir, '.gitignore')
+		,	defaultHintIgnore = checkForProjectFile(path.join(__dirname), '.jshintignore')
 		;
 
 	if (jshintIgnore) {
     console.log(`\nFound .jshintignore file...`);
-    console.log(`Using ${formatHappyText(jshintIgnore)} as excludePath \n`);
+    console.log(`Using ${formatHappyText(jshintIgnore)} as excludePath`);
+
 		return jshintIgnore;
 	}
 
-	if (gitIgnore) {
-    console.log(`\nFound .gitignore file...`);
-    console.log(`Using ${formatHappyText(gitIgnore)} as excludePath \n`);
-		return gitIgnore;
-	}
-
-  console.log(`\n${formatAngryText('Didnt find a .jshintignore or a .gitignore file locally')}`);
+  console.log(`\n${formatAngryText('Didnt find a .jshintignore file locally')}`);
   console.log(`Using ${formatHappyText('default astro')} .jshintignore as exclude \n`);
+	console.log(`Using ${formatHappyText(defaultHintIgnore)} as excludePath`);
 
-  return getDefault();
+  return defaultHintIgnore;
 };

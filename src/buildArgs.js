@@ -10,6 +10,7 @@ var path = require('path')
 
 var getIgnoreFile = require('./getIgnoreFilePath')
 	,	getJsHintRcFilePath = require('./getJsHintRcFilePath')
+  , formatAngryText = require('./formatAngryText')
 	;
 
 function buildArgs (projectDir) {
@@ -18,11 +19,15 @@ function buildArgs (projectDir) {
 		, excludeFilePath = getIgnoreFile(projectDir)
 		,	jshintrcFilePath = getJsHintRcFilePath(projectDir)
 		;
-	// currently there are no additional options available for this module
 
 	args.push(`--reporter=${reporter}`);
 
-	args.push(`--exclude-path=${excludeFilePath}`);
+  if (excludeFilePath !== undefined) {
+	  args.push(`--exclude-path=${excludeFilePath}`);
+  } else {
+    console.log(`${formatAngryText('Couldnt find exclude file ignoring from jshint call')}`);
+  }
+
 	args.push(`--config=${jshintrcFilePath}`);
 	args.push(`--verbose`);
 
