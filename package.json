@@ -7,7 +7,7 @@
     "postinstall": "npm run transpile",
     "transpile": "astro babel",
     "prejshint": "npm run transpile",
-    "jshint": "astro jshint",
+    "jshint": "jshint .",
     "test": "exit 0"
   },
   "repository": {

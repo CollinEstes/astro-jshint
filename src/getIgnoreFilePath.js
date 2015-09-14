@@ -4,7 +4,8 @@
 *
 **/
 var path = require('path')
-	;
+	, fs = require('fs')
+  ;
 
 var checkForProjectFile = require('./checkForProjectFile.js')
   , formatHappyText = require('./formatHappyText')
@@ -13,7 +14,7 @@ var checkForProjectFile = require('./checkForProjectFile.js')
 
 module.exports = function (projectDir) {
 	var jshintIgnore = checkForProjectFile(projectDir, '.jshintignore')
-		,	defaultHintIgnore = checkForProjectFile(path.join(__dirname), '.jshintignore')
+		,	defaultHintIgnore = checkForProjectFile(path.join(path.dirname(fs.realpathSync(__filename)), '../configuration'), '.jshintignore')
 		;
 
 	if (jshintIgnore) {

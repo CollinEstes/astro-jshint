@@ -15,7 +15,7 @@ module.exports = function (projectDir, options) {
 	var args = buildArgs(projectDir, options),
 	    cmd = path.resolve(fs.realpathSync(__dirname), '../node_modules/.bin/jshint');
 
-	console.log(formatHappyText('         ▲,▲,▼,▼,◄,►,◄,►,(B),(A),[Start]         ') + ' \n');
+	console.log(formatHappyText('\t\t\t▲,▲,▼,▼,◄,►,◄,►,(B),(A),[Start]\t\t\t') + ' \n');
 
 	//setup
 	return { cmd: cmd, args: args };
