@@ -4,7 +4,7 @@
   "description": "Astro module for running jshint analysis over a javascript application",
   "main": "dist/index.js",
   "scripts": {
-    "preinstall": "npm run transpile",
+    "postinstall": "npm run transpile",
     "transpile": "astro babel",
     "prejshint": "npm run transpile",
     "jshint": "astro jshint",
@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/CollinEstes/astro-jshint#readme",
   "devDependencies": {
-    "astro": "^0.1.3"
+    "astro": "^0.7.1"
   },
   "dependencies": {
     "chalk": "^1.1.1",
