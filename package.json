@@ -1,16 +1,13 @@
 {
   "name": "astro-jshint",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "Astro module for running jshint analysis over a javascript application",
   "main": "dist/index.js",
   "scripts": {
     "preinstall": "npm run transpile",
-
     "transpile": "astro babel",
-
     "prejshint": "npm run transpile",
     "jshint": "astro jshint",
-
     "test": "exit 0"
   },
   "repository": {
