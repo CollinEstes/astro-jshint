@@ -22,7 +22,7 @@ function buildArgs (projectDir) {
 
 	args.push(`--reporter=${reporter}`);
 
-  if (excludeFilePath === undefined) {
+  if (excludeFilePath !== undefined) {
 	  args.push(`--exclude-path=${excludeFilePath}`);
   } else {
 		console.log(`${formatAngryText('\t')}`);
